@@ -17,6 +17,7 @@
 		841F4B6123FBDBB200664EBA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F4B6023FBDBB200664EBA /* Utils.swift */; };
 		841F4B6323FBDBFF00664EBA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F4B6223FBDBFF00664EBA /* Film.swift */; };
 		841F4B6523FBDC4C00664EBA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F4B6423FBDC4C00664EBA /* Network.swift */; };
+		841F4B6723FBE6E900664EBA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F4B6623FBE6E900664EBA /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		841F4B6023FBDBB200664EBA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		841F4B6223FBDBFF00664EBA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		841F4B6423FBDC4C00664EBA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		841F4B6623FBE6E900664EBA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				841F4B4723FBD9FC00664EBA /* AppDelegate.swift */,
 				841F4B4923FBD9FC00664EBA /* SceneDelegate.swift */,
 				841F4B4B23FBD9FC00664EBA /* SearchViewController.swift */,
+				841F4B6623FBE6E900664EBA /* DetailViewController.swift */,
 				841F4B4D23FBD9FC00664EBA /* Main.storyboard */,
 				841F4B5323FBDA0200664EBA /* Assets.xcassets */,
 				841F4B5523FBDA0200664EBA /* LaunchScreen.storyboard */,
@@ -173,6 +176,7 @@
 				841F4B4A23FBD9FC00664EBA /* SceneDelegate.swift in Sources */,
 				841F4B6523FBDC4C00664EBA /* Network.swift in Sources */,
 				841F4B5223FBD9FC00664EBA /* TestAppIOS.xcdatamodeld in Sources */,
+				841F4B6723FBE6E900664EBA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

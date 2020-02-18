@@ -57,8 +57,8 @@ class SearchViewController: UIViewController {
 //    MARK: Button listener
     
     @IBAction func search_title(_ sender: Any) {
-//        spinner for representing some work is in progress
-        self.addSpinner()
+        //        spinner for representing some work is in progress
+        addSpinner()
         if title_text_field.hasText{
             let title = title_text_field.text ?? ""
             request(text: title){
@@ -86,5 +86,22 @@ class SearchViewController: UIViewController {
         }
         
     }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        let story: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle(for: DetailViewController.self))
+        let detailvc = story.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailvc.title_text = film?.title
+        detailvc.genre_text = film?.genre
+        detailvc.release_text = film?.release
+        detailvc.runtime_text = film?.duration
+        detailvc.year_text = film?.year
+        detailvc.web_text = film?.web
+        detailvc.sinopsis_text = film?.plot
+        detailvc.icon_image = film?.image
+        let detailNavController = UINavigationController(rootViewController: detailvc)
+        self.present(detailNavController, animated: true)
+        
+    }
+    
 }
 
