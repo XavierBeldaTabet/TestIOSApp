@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1bs-lz-bNn"; */
+"1bs-lz-bNn.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2fu-jQ-eu3"; */
+"2fu-jQ-eu3.text" = "Label";
+
+/* Class = "UILabel"; text = "This is a sample app for a test, here u can search for a movie and visualize some of its details"; ObjectID = "dsz-G3-Q4z"; */
+"dsz-G3-Q4z.text" = "Esta es una app de prueba para un test, en ella se puede buscar el título de una película y ver alguno de sus detalles";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oS9-RR-uK0"; */
+"oS9-RR-uK0.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pAw-xg-dPv"; */
+"pAw-xg-dPv.normalTitle" = "Buscar";
+
+/* Class = "UITextField"; placeholder = "Insert your film"; ObjectID = "pNk-bK-f3A"; */
+"pNk-bK-f3A.placeholder" = "Inserta el título de la película";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qRE-td-jwT"; */
+"qRE-td-jwT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rwo-Fe-VPW"; */
+"rwo-Fe-VPW.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tFa-IC-lvl"; */
+"tFa-IC-lvl.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tG5-kd-BnR"; */
+"tG5-kd-BnR.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xI9-LG-nNh"; */
+"xI9-LG-nNh.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xQp-uX-axj"; */
+"xQp-uX-axj.text" = "Label";
