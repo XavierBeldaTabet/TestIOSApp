@@ -1,0 +1,17 @@
+/* 
+  Strings.strings
+  TestAppIOS
+
+  Created by Admin on 18/02/2020.
+  Copyright © 2020 Admin. All rights reserved.
+*/
+"title" = "Título";
+"genre"="Género";
+"year"= "Año";
+"plot"= "Sinopsis";
+"runtime"= "Duración";
+"web"= "Web";
+"check_internet"= "Por favor, compruebe su conexión a internet";
+"check_text_input"= "Por favor, inserte un título de película";
+"error" = "Ha habido un error, inténtelo de nuevo más tarde";
+"cancel"= "Cancelar";

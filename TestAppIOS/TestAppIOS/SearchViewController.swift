@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var search_btn: UIButton!
     @IBOutlet weak var title_text_field: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,27 +61,34 @@ class SearchViewController: UIViewController {
         //        spinner for representing some work is in progress
         addSpinner()
         if title_text_field.hasText{
-            let title = title_text_field.text ?? ""
-            request(text: title){
-                [weak self] (Result) in
-                switch Result{
-                case .success(let data):
-                    let json_data = try! JSONDecoder().decode(JSON_Film.self, from: data)
-                    self!.film = Film.init(json: json_data)
-                    self?.film_info_view.isHidden = false
-                    self?.title_label.text = "Title: " + (self?.film?.title)!
-                    self?.year_label.text = "Year: " + (self?.film?.year)!
-                    self?.image_icon.image = self?.film?.image
-                case .failure(let _):
-                    let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
-                    let cancel = UIAlertAction(title: "", style: .cancel, handler: nil)
-                    alert.addAction(cancel)
-                    self!.present(alert, animated: true, completion: nil)
+            if Reachability.isConnectedToNetwork() {
+                let title = title_text_field.text ?? ""
+                request(text: title){
+                    [weak self] (Result) in
+                    switch Result{
+                    case .success(let data):
+                        let json_data = try! JSONDecoder().decode(JSON_Film.self, from: data)
+                        self!.film = Film.init(json: json_data)
+                        self?.film_info_view.isHidden = false
+                        self?.title_label.text = NSLocalizedString("title", comment: "") + (self?.film?.title)!
+                        self?.year_label.text = NSLocalizedString("year", comment: "") + (self?.film?.year)!
+                        self?.image_icon.image = self?.film?.image
+                    case .failure(let _):
+                        let alert = UIAlertController(title: "", message: NSLocalizedString("error", comment: ""), preferredStyle: .alert)
+                        let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+                        alert.addAction(cancel)
+                        self!.present(alert, animated: true, completion: nil)
+                    }
                 }
+            }else {
+                let alert = UIAlertController(title: "", message: NSLocalizedString("check_internet", comment: ""), preferredStyle: .alert)
+                let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+                alert.addAction(cancel)
+                self.present(alert, animated: true, completion: nil)
             }
         } else{
-            let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "", style: .cancel, handler: nil)
+            let alert = UIAlertController(title: "", message: NSLocalizedString("check_text_input", comment: ""), preferredStyle: .alert)
+            let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         }

@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 struct JSON_Film: Codable{
-    var Title:String
-    var Year:String
-    var Runtime:String
-    var Genre:String
-    var Plot:String
-    var Poster:String
-    var Website:String
-    var Released:String
+    var Title:String?
+    var Year:String?
+    var Runtime:String?
+    var Genre:String?
+    var Plot:String?
+    var Poster:String?
+    var Website:String?
+    var Released:String?
 }
 
 public class Film {
@@ -49,7 +49,7 @@ public class Film {
         self.web = json.Website
         self.release = json.Released
         do{
-            let icon_data = try Data(contentsOf: URL(string: json.Poster)!)
+            let icon_data = try Data(contentsOf: URL(string: json.Poster!)!)
             self.image = UIImage(data: icon_data)
         }catch{
             self.image = UIImage(systemName: "film")
