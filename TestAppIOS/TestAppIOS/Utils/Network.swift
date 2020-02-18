@@ -9,6 +9,10 @@
 import Foundation
 import SystemConfiguration
 
+struct JSON_Response: Codable{
+    var Response: String?
+    var Error:String?
+}
 
 public func request(text: String, completion: @escaping (Result<Data, Error>) -> Void){
     
@@ -42,7 +46,12 @@ public func request(text: String, completion: @escaping (Result<Data, Error>) ->
                 
             case 200:
                 if let unwrappedData = data {
-                    completion(.success(unwrappedData))
+                    let json_data = try! JSONDecoder().decode(JSON_Response.self, from: data!)
+                    if json_data.Error == "Movie not found!"{
+                        completion(.failure(NetworkError.movieNotFound))
+                    }else{
+                        completion(.success(unwrappedData))
+                    }
                 }
             default:
                 completion(.failure(NetworkError.defaultError))
@@ -62,6 +71,7 @@ enum NetworkError: Error{
     case badUrl
     case badResponse
     case defaultError
+    case movieNotFound
 }
 
 

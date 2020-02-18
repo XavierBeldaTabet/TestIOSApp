@@ -73,11 +73,18 @@ class SearchViewController: UIViewController {
                         self?.title_label.text = NSLocalizedString("title", comment: "") + (self?.film?.title)!
                         self?.year_label.text = NSLocalizedString("year", comment: "") + (self?.film?.year)!
                         self?.image_icon.image = self?.film?.image
-                    case .failure(let _):
-                        let alert = UIAlertController(title: "", message: NSLocalizedString("error", comment: ""), preferredStyle: .alert)
-                        let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
-                        alert.addAction(cancel)
-                        self!.present(alert, animated: true, completion: nil)
+                    case .failure(let error):
+                        if "\(error)" == "movieNotFound"{
+                            let alert = UIAlertController(title: "", message: NSLocalizedString("movie_not_found", comment: ""), preferredStyle: .alert)
+                            let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+                            alert.addAction(cancel)
+                            self!.present(alert, animated: true, completion: nil)
+                        }else{
+                            let alert = UIAlertController(title: "", message: NSLocalizedString("error", comment: ""), preferredStyle: .alert)
+                            let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+                            alert.addAction(cancel)
+                            self!.present(alert, animated: true, completion: nil)
+                        }
                     }
                 }
             }else {

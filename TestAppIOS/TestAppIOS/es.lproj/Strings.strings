@@ -11,6 +11,7 @@
 "plot"= "Sinopsis";
 "runtime"= "Duración";
 "web"= "Web";
+"movie_not_found" = "Película no encontrada";
 "check_internet"= "Por favor, compruebe su conexión a internet";
 "check_text_input"= "Por favor, inserte un título de película";
 "error" = "Ha habido un error, inténtelo de nuevo más tarde";

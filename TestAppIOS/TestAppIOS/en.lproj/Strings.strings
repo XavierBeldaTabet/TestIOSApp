@@ -11,6 +11,7 @@
 "plot"= "Plot";
 "runtime"= "Runtime";
 "web"= "Web";
+"movie_not_found" = "Movie not found";
 "check_internet"= "Please, check your internet connection";
 "check_text_input"= "Please, insert a film title";
 "error" = "There has been an error, please try again later";
