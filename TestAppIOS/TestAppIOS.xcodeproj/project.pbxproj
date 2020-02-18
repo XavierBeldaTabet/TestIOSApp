@@ -57,7 +57,6 @@
 		841F4B3B23FBD9FB00664EBA = {
 			isa = PBXGroup;
 			children = (
-				841F4B7C23FBF51B00664EBA /* Strings.strings */,
 				841F4B4623FBD9FC00664EBA /* TestAppIOS */,
 				841F4B4523FBD9FC00664EBA /* Products */,
 			);
@@ -74,14 +73,14 @@
 		841F4B4623FBD9FC00664EBA /* TestAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				841F4B5323FBDA0200664EBA /* Assets.xcassets */,
+				841F4B8F23FBFBDC00664EBA /* Controllers */,
+				841F4B7C23FBF51B00664EBA /* Strings.strings */,
 				841F4B5F23FBDB9000664EBA /* Model */,
 				841F4B5E23FBDB8400664EBA /* Utils */,
 				841F4B4723FBD9FC00664EBA /* AppDelegate.swift */,
 				841F4B4923FBD9FC00664EBA /* SceneDelegate.swift */,
-				841F4B4B23FBD9FC00664EBA /* SearchViewController.swift */,
-				841F4B6623FBE6E900664EBA /* DetailViewController.swift */,
 				841F4B4D23FBD9FC00664EBA /* Main.storyboard */,
-				841F4B5323FBDA0200664EBA /* Assets.xcassets */,
 				841F4B5523FBDA0200664EBA /* LaunchScreen.storyboard */,
 				841F4B5823FBDA0200664EBA /* Info.plist */,
 				841F4B5023FBD9FC00664EBA /* TestAppIOS.xcdatamodeld */,
@@ -104,6 +103,15 @@
 				841F4B6223FBDBFF00664EBA /* Film.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		841F4B8F23FBFBDC00664EBA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				841F4B4B23FBD9FC00664EBA /* SearchViewController.swift */,
+				841F4B6623FBE6E900664EBA /* DetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
